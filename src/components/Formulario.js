@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import faker from 'faker';
+import swal from 'sweetalert';
+
 
 
 const Formulario = ({crearCita}) => {
@@ -65,9 +67,17 @@ const Formulario = ({crearCita}) => {
         sintomas: ''
        });
 
-       //Ventana emergente de agregar cita
-       // modificar
-       alert("cita agregada");
+       //Ventana emergente de agregar cita con libreria Sweet Alert
+       
+       swal("Cita añadida", "", "success");
+
+       
+
+        
+
+
+       
+
 
     }
 
@@ -185,6 +195,7 @@ const Formulario = ({crearCita}) => {
                 ></textarea>
                     
                 <button
+                    id="boton"
                     type="submit"
                     className="u-full-width button-primary"
                 >Pedir cita</button>
