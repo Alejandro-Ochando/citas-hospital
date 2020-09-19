@@ -65,6 +65,9 @@ const Formulario = ({crearCita}) => {
         sintomas: ''
        });
 
+       //Ventana emergente de agregar cita
+       // modificar
+       alert("cita agregada");
 
     }
 
