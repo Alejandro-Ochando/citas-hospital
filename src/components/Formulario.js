@@ -88,7 +88,7 @@ const Formulario = ({crearCita}) => {
 
     return ( 
         <Fragment>
-            <h2>Pedir cita medica</h2>
+            <h2>Pedir cita médica</h2>
             
             <form 
                 onSubmit={submitCita}
@@ -160,13 +160,13 @@ const Formulario = ({crearCita}) => {
                     >Medicina General</option>
                     <option 
                         value='Traumatologia'    
-                    >Traumatologia</option>
+                    >Traumatología</option>
                     <option 
                         value='Urologia' 
-                    >Urologia</option>
+                    >Urología</option>
                 </select>
 
-                <label>Sintomas</label>
+                <label>Síntomas</label>
                 <textarea
                     name="sintomas"
                     placeholder="Escribe aquí..."
