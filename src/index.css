@@ -13,9 +13,7 @@ html {
     color: white;
     padding: 3rem 0;
     text-align: center;
-  
     text-transform: uppercase;
-  
     font-family: 'Staatliches', cursive;
     letter-spacing: 1px;
   }
@@ -58,14 +56,15 @@ html {
       box-shadow: none;
       box-sizing: border-box;
   }
-  
+  div.cita {
+    margin-bottom: 10px;
+  }
   .cita {
     padding: 2rem;
-    background: white;
-    border-bottom: 1px solid #e1e1e1;
+    background: rgb(255, 255, 255);
+    border-bottom: 1px solid #000000;
     color: black;
   }
-  
   .cita p {
     font-weight: bold;
     margin-bottom: .8rem;
@@ -88,9 +87,8 @@ html {
     color: white;
     margin-top: 2rem;
   }
-  
   .alerta-error {
-    background-color: white;
+    background-color: rgb(255, 203, 203);
     color: red;
     padding: 1rem;
     font-size: 2rem;

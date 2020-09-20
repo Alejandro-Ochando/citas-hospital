@@ -1,9 +1,6 @@
 import React from 'react';
 
 
-
-
-
 const Cita = ({cita, eliminarCita}) => {
     
     const d = (new Date());
@@ -12,12 +9,12 @@ const Cita = ({cita, eliminarCita}) => {
     const dia = d.getDate();
     
     
-    
     return ( 
     
     <div className="cita">
-        <p>Nombre: <span>{cita.nombre}</span></p>
-        <p>Apellidos <span>{cita.apellido1} {cita.apellido2}</span></p>
+        <p>Nombre: <span>{cita.nombre.toUpperCase()}</span></p>
+        <p>Apellidos <span>{cita.apellido1.toUpperCase()} 
+                            {cita.apellido2.toUpperCase()}</span></p>
         <p>Fecha: <span>{cita.fecha}</span></p>
         <p>Hora: <span>{cita.hora}</span></p>
         <p>Especialidad: <span>{cita.especialidad}</span></p>

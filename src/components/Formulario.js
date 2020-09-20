@@ -4,7 +4,6 @@ import faker from 'faker';
 import swal from 'sweetalert';
 
 
-
 const Formulario = ({crearCita}) => {
 
     const [cita, actualizarCita] = useState({
@@ -17,11 +16,8 @@ const Formulario = ({crearCita}) => {
         sintomas: ''
     });
 
-    
     const [ error, actualizarError ] = useState(false)
-
-
-
+    
     const actualizarState = e => {
         actualizarCita({
             ...cita,
@@ -29,13 +25,12 @@ const Formulario = ({crearCita}) => {
         }) 
     }
 
-
     const submitCita = e => {
         e.preventDefault();
         
         //validacion
-        if(nombre.trim() === '' || apellido1.trim() === '' || apellido2.trim() === '' 
-        || fecha.trim() === '' || hora.trim()  === '' || sintomas.trim() === ''){
+        if( nombre.trim() === '' || apellido1.trim() === '' || apellido2.trim() === '' 
+        || fecha.trim() === '' || hora.trim()  === '' || especialidad.trim() === '' || sintomas.trim() === ''){
             actualizarError(true);
             return;
         }
@@ -46,16 +41,13 @@ const Formulario = ({crearCita}) => {
         //Crear un id
         cita.id=uuid();
         
-
         //Crear un doctor
         cita.doctor = faker.name.findName();
         cita.consulta = Math.floor(Math.random() * 11);
         
-
        //Crear la cita
        crearCita(cita);
         
-
        //Reiniciar form
        actualizarCita({
         nombre: '',
@@ -68,19 +60,9 @@ const Formulario = ({crearCita}) => {
        });
 
        //Ventana emergente de agregar cita con libreria Sweet Alert
-       
        swal("Cita añadida", "", "success");
 
-       
-
-        
-
-
-       
-
-
     }
-
 
     const { nombre, apellido1, apellido2, fecha, hora, especialidad, sintomas } = cita
     
@@ -104,13 +86,10 @@ const Formulario = ({crearCita}) => {
     const fechaActual = `${year}-${month}-${day}`;
     const fechaFinal = `2100-12-31`;
 
-
-
-    
     return ( 
         <Fragment>
             <h2>Pedir cita medica</h2>
-            {error ? <p className="alerta-error">Todos los campos son obligatorios</p>  :null}
+            
             <form 
                 onSubmit={submitCita}
             >
@@ -170,11 +149,15 @@ const Formulario = ({crearCita}) => {
                 <label>Especialidad</label>
                 <select 
                     name="especialidad"
-                    onChange={actualizarState} 
-                >
+                    onChange={actualizarState}
+                    required
+                >   
                     <option 
-                        value='Medico de Cabecera'
-                    >Medico de Cabecera</option>
+                        
+                    >Seleccione</option>
+                    <option 
+                        value='Medicina General'
+                    >Medicina General</option>
                     <option 
                         value='Traumatologia'    
                     >Traumatologia</option>
@@ -193,7 +176,7 @@ const Formulario = ({crearCita}) => {
                     onChange={actualizarState}
                     value={sintomas}
                 ></textarea>
-                    
+                {error ? <p className="alerta-error">Todos los campos son obligatorios</p>  :null}    
                 <button
                     id="boton"
                     type="submit"
