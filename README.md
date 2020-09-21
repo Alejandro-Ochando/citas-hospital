@@ -18,13 +18,14 @@ This is my first project made in React, ***it is not functional on production la
 
 #### No medical appointments
 
-<img src=#>
+<img src=https://i.ibb.co/18msjPS/sincitas.png>
+
 
 
 #### Medical appointment
 
-<img src=#>
-<img src=#>
+<img src=https://i.ibb.co/f4Jv7DF/cita1.png>
+<img src=https://i.ibb.co/92V131x/cita2.png>
 
 
 
