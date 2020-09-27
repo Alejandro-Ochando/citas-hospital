@@ -10,7 +10,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 >Project fully completed.
 
-This is my first project made in React, ***it is not functional on production lathes***. It can be used to see basic React functions and in educational environments.
+This is my second project made in React, ***it is not functional on production lathes***. It can be used to see basic React functions and in educational environments.
 
 
 
